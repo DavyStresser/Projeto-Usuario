@@ -1,0 +1,54 @@
+﻿@using GISA.ViewModel.Home;
+@model IEnumerable<GISA.Model.TbFatCadIndividual>
+
+@{
+    ViewData["Title"] = "Index";
+    List<AtendimentoViewModel> atendimento = ViewBag.Atendimento;
+    string jsonProcessado = ViewBag.JsonProcessado;
+}
+
+<h1>Processar Ficha de Atendimento</h1>
+
+<form action="~/Home/ProcessarFichaAtendimento" enctype="multipart/form-data" method="post">
+    <dl>
+        <dt>
+            <label for="FileUpload_FormFile">Arquivo Thrift</label>
+        </dt>
+        <dd>
+            <input id="arquivo" type="file" name="arquivo" />
+            <input type="submit" value="processar" class="btn btn-primary" style="float: right;">
+        </dd>
+    </dl>
+</form>
+
+@if (!string.IsNullOrEmpty(jsonProcessado))
+{
+    <label>Json processado</label>
+    <textarea rows="3" style="width:100%"> @jsonProcessado </textarea>
+}
+
+<br>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">CoSeqFatAtdInd</th>
+            <th scope="col">CoDimTipoFicha1</th>
+            <th scope="col">NuUuidFicha</th>
+            <th scope="col">DtInicialAtendimento</th>
+            <th scope="col">Detalhes</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in atendimento)
+        {
+            <tr>
+                <th scope="row">@i.CoSeqFatAtdInd</th>
+                <td>@i.CoDimTipoFicha</td>
+                <td>@i.NuUuidFicha</td>
+                <td>@i.DtInicialAtendimento</td>
+                <td><a href="/home/detalhes?nuUuidFicha=@i.NuUuidFicha">visualizar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

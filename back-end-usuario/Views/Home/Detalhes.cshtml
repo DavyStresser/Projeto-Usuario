@@ -1,0 +1,1341 @@
+﻿@{
+    ViewData["Title"] = "Detalhes";
+    List<TbFatAtendimentoIndividual> listaAtendimento = ViewBag.ListaAtendimento;
+    List<TbFatAtdIndProblemas> listaProblemas = ViewBag.ListaProblemas;
+    List<TbFatAtdIndProcedimentos> listaProcedimentos = ViewBag.ListaProcedimentos;
+    List<TbFatAtdIndEncaminhamentos> listaEncaminhamentos = ViewBag.ListaEncaminhamentos;
+    List<TbFatFichas> listaEFichas = ViewBag.ListaFichas;
+    List<TbFatAtdIndMedicamentos> listaMedicamentos = ViewBag.ListaMedicamentos;
+    List<TbFatAtdIndExames> listaExames = ViewBag.ListaExames;
+}
+
+<div>
+    <a href="/home/index">Voltar</a>
+</div>
+
+<br />
+
+<h3>tb_fat_atendimento_individual</h3>
+<div b-q26b4ng8qo="" class="container" style="overflow: auto;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th style=" min-width: 344px !important;">
+                    NuUuidFicha
+                </th>
+                <th>
+                    NuAtendimento
+                </th>
+                <th>
+                    NuCns
+                </th>
+                <th>
+                    DtNascimento
+                </th>
+                <th>
+                    NuPeso
+                </th>
+                <th>
+                    NuAltura
+                </th>
+                <th>
+                    NuPerimetroCefalico
+                </th>
+                <th>
+                    StVacinacaoEmDia
+                </th>
+                <th>
+                    StGravidezPlanejada
+                </th>
+                <th>
+                    NuIdadeGestacionalSemanas
+                </th>
+                <th>
+                    NuGestasPrevias
+                </th>
+                <th>
+                    NuPartos
+                </th>
+                <th>
+                    StFicouEmObservacao
+                </th>
+                <th>
+                    StNasfAvaliacaoDiagnostico
+                </th>
+                <th>
+                    StNasfProceClinTerapeutico
+                </th>
+                <th>
+                    StNasfPrescricaoTerapeutica
+                </th>
+                <th>
+                    StCondutaConsultaAgendada
+                </th>
+                <th>
+                    StCondutaCuiddContiProgram
+                </th>
+                <th>
+                    StCondutaAgendamentoGrupos
+                </th>
+                <th>
+                    StCondutaAgendamentoNasf
+                </th>
+                <th>
+                    StCondutaAltaEpisodio
+                </th>
+                <th>
+                    StEncaminhamentoInternoDia
+                </th>
+                <th>
+                    StEncaminhamentoServSpecial
+                </th>
+                <th>
+                    StEncaminhamentoCaps
+                </th>
+                <th>
+                    StEncaminhamentoInternHospi
+                </th>
+                <th>
+                    StEncaminhamentoUrgencia
+                </th>
+                <th>
+                    StEncaminhamentoServicoAd
+                </th>
+                <th>
+                    StEncaminhamentoIntersetoria
+                </th>
+                <th>
+                    DsFiltroCids
+                </th>
+                <th>
+                    DsFiltroCiaps
+                </th>
+                <th>
+                    DsFiltroProcedAvaliados
+                </th>
+                <th>
+                    DsFiltroProcedSolicitados
+                </th>
+                <th>
+                    NuProntuario
+                </th>
+                <th style=" min-width: 344px !important;">
+                    NuUuidDadoTransp
+                </th>
+                <th style=" min-width: 300px !important;">
+                    DtInicialAtendimento
+                </th>
+                <th style=" min-width: 300px !important;">
+                    DtFinalAtendimento
+                </th>
+                <th>
+                    NuCpfCidadao
+                </th>
+                <th>
+                    CoDimAleitamento
+                </th>
+                <th>
+                    CoDimCbo1
+                </th>
+                <th>
+                    CoDimCbo2
+                </th>
+                <th>
+                    CoDimCdsTipoOrigem
+                </th>
+                <th>
+                    CoDimEquipe1
+                </th>
+                <th>
+                    CoDimEquipe2
+                </th>
+                <th>
+                    CoDimFaixaEtaria
+                </th>
+                <th>
+                    CoDimLocalAtendimento
+                </th>
+                <th>
+                    CoDimModalidadeAd
+                </th>
+                <th>
+                    CoDimMunicipio
+                </th>
+                <th>
+                    CoDimProfissional1
+                </th>
+                <th>
+                    CoDimProfissional2
+                </th>
+                <th>
+                    CoDimRacionalidadeSaude
+                </th>
+                <th>
+                    CoDimSexo
+                </th>
+                <th>
+                    CoDimTempoDum
+                </th>
+                <th>
+                    CoDimTempo
+                </th>
+                <th>
+                    CoDimTipoAtendimento
+                </th>
+                <th>
+                    CoDimTipoFicha
+                </th>
+                <th>
+                    CoDimTipoOrigemDadoTransp
+                </th>
+                <th>
+                    CoDimTurno
+                </th>
+                <th>
+                    CoDimUnidadeSaude1
+                </th>
+                <th>
+                    CoDimUnidadeSaude2
+                </th>
+                <th>
+                    CoFatCidadaoPec
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in listaAtendimento)
+            {
+                string nascimento = item.DtNascimento.Value.ToString("dd/MM/yyyy");
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuUuidFicha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuAtendimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuCns)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => nascimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuPeso)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuAltura)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuPerimetroCefalico)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StVacinacaoEmDia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StGravidezPlanejada)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuIdadeGestacionalSemanas)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuGestasPrevias)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuPartos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StFicouEmObservacao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StNasfAvaliacaoDiagnostico)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StNasfProceClinTerapeutico)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StNasfPrescricaoTerapeutica)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StCondutaConsultaAgendada)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StCondutaCuiddContiProgram)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StCondutaAgendamentoGrupos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StCondutaAgendamentoNasf)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StCondutaAltaEpisodio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StEncaminhamentoInternoDia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StEncaminhamentoServSpecial)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StEncaminhamentoCaps)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StEncaminhamentoInternHospi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StEncaminhamentoUrgencia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StEncaminhamentoServicoAd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StEncaminhamentoIntersetoria)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DsFiltroCids)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DsFiltroCiaps)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DsFiltroProcedAvaliados)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DsFiltroProcedSolicitados)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuProntuario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuUuidDadoTransp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DtInicialAtendimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DtFinalAtendimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuCpfCidadao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimAleitamentoNavigation.CoSeqDimAleitamento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCbo1Navigation.CoSeqDimCbo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCbo2Navigation.CoSeqDimCbo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCdsTipoOrigemNavigation.CoSeqDimTipoOrigem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimEquipe1Navigation.CoSeqDimEquipe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimEquipe2Navigation.CoSeqDimEquipe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimFaixaEtariaNavigation.CoSeqDimFaixaEtaria)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimLocalAtendimentoNavigation.CoSeqDimLocalAtendimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimModalidadeAdNavigation.CoSeqDimModalidadeAd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimMunicipioNavigation.CoSeqDimMunicipio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProfissional1Navigation.CoSeqDimProfissional)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProfissional2Navigation.CoSeqDimProfissional)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimRacionalidadeSaudeNavigation.CoSeqDimRacionalidadeSaude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimSexoNavigation.CoSeqDimSexo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTempoDumNavigation.CoSeqDimTempo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTempoNavigation.CoSeqDimTempo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoAtendimentoNavigation.CoSeqDimTipoAtendimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoFichaNavigation.CoSeqDimTipoFicha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoOrigemDadoTranspNavigation.CoSeqDimTpOrgmDadoTransp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTurnoNavigation.CoSeqDimTurno)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimUnidadeSaude1Navigation.CoSeqDimUnidadeSaude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimUnidadeSaude2Navigation.CoSeqDimUnidadeSaude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoFatCidadaoPecNavigation.CoSeqFatCidadaoPec)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<br />
+
+<h3>tb_fat_atd_ind_problemas</h3>
+<div b-q26b4ng8qo="" class="container" style="overflow: auto;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    CoFatAtdInd
+                </th>
+                <th style=" min-width: 344px !important;">
+                    NuUuidFicha
+                </th>
+                <th>
+                    NuAtendimento
+                </th>
+                <th>
+                    NuCns
+                </th>
+                <th style=" min-width: 344px !important;">
+                    NuUuidDadoTransp
+                </th>
+                <th>
+                    NuCpfCidadao
+                </th>
+                <th>
+                    CoDimC
+                </th>
+                <th>
+                    CoDimCbo1
+                </th>
+                <th>
+                    CoDimCbo2
+                </th>
+                <th>
+                    CoDimCdsTipoOrigem
+                </th>
+                <th>
+                    CoDimCiap
+                </th>
+                <th>
+                    CoDimEquipe1
+                </th>
+                <th>
+                    CoDimEquipe2
+                </th>
+                <th>
+                    CoDimMunicipio
+                </th>
+                <th>
+                    CoDimProfissional1
+                </th>
+                <th>
+                    CoDimProfissional2
+                </th>
+                <th>
+                    CoDimTempo
+                </th>
+                <th>
+                    CoDimTipoFicha
+                </th>
+                <th>
+                    CoDimTipoOrigemDadoTransp
+                </th>
+                <th>
+                    CoDimUnidadeSaude1
+                </th>
+                <th>
+                    CoDimUnidadeSaude2
+                </th>
+                <th>
+                    CoFatCidadaoPec
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in listaProblemas)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoFatAtdInd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuUuidFicha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuAtendimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuCns)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuUuidDadoTransp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuCpfCidadao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimC.CoSeqDimCid)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCbo1Navigation.CoSeqDimCbo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCbo2Navigation.CoSeqDimCbo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCdsTipoOrigemNavigation.CoSeqDimTipoOrigem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCiapNavigation.CoSeqDimCiap)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimEquipe1Navigation.CoSeqDimEquipe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimEquipe2Navigation.CoSeqDimEquipe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimMunicipioNavigation.CoSeqDimMunicipio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProfissional1Navigation.CoSeqDimProfissional)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProfissional2Navigation.CoSeqDimProfissional)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTempoNavigation.CoSeqDimTempo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoFichaNavigation.CoSeqDimTipoFicha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoOrigemDadoTranspNavigation.CoSeqDimTpOrgmDadoTransp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimUnidadeSaude1Navigation.CoSeqDimUnidadeSaude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimUnidadeSaude2Navigation.CoSeqDimUnidadeSaude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoFatCidadaoPecNavigation.CoSeqFatCidadaoPec)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<br />
+
+<h3>tb_fat_atd_ind_procedimentos</h3>
+<div b-q26b4ng8qo="" class="container" style="overflow: auto;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    CoFatAtdInd
+                </th>
+                <th style=" min-width: 344px !important;">
+                    NuUuidFicha
+                </th>
+                <th>
+                    NuAtendimento
+                </th>
+                <th>
+                    NuCns
+                </th>
+                <th style=" min-width: 344px !important;">
+                    NuUuidDadoTransp
+                </th>
+                <th>
+                    NuCpfCidadao
+                </th>
+                <th>
+                    CoDimCbo1
+                </th>
+                <th>
+                    CoDimCbo2
+                </th>
+                <th>
+                    CoDimCdsTipoOrigem
+                </th>
+                <th>
+                    CoDimEquipe1
+                </th>
+                <th>
+                    CoDimEquipe2
+                </th>
+                <th>
+                    CoDimMunicipio
+                </th>
+                <th>
+                    CoDimProcedimentoAvaliado
+                </th>
+                <th>
+                    CoDimProcedimentoSolicitado
+                </th>
+                <th>
+                    CoDimProfissional1
+                </th>
+                <th>
+                    CoDimProfissional2
+                </th>
+                <th>
+                    CoDimTempo
+                </th>
+                <th>
+                    CoDimTipoFicha
+                </th>
+                <th>
+                    CoDimTipoOrigemDadoTransp
+                </th>
+                <th>
+                    CoDimUnidadeSaude1
+                </th>
+                <th>
+                    CoDimUnidadeSaude2
+                </th>
+                <th>
+                    CoFatCidadaoPec
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in listaProcedimentos)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoFatAtdInd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuUuidFicha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuAtendimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuCns)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuUuidDadoTransp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuCpfCidadao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCbo1Navigation.CoSeqDimCbo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCbo2Navigation.CoSeqDimCbo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCdsTipoOrigemNavigation.CoSeqDimTipoOrigem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimEquipe1Navigation.CoSeqDimEquipe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimEquipe2Navigation.CoSeqDimEquipe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimMunicipioNavigation.CoSeqDimMunicipio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProcedimentoAvaliadoNavigation.CoSeqDimProcedimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProcedimentoSolicitadoNavigation.CoSeqDimProcedimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProfissional1Navigation.CoSeqDimProfissional)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProfissional2Navigation.CoSeqDimProfissional)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTempoNavigation.CoSeqDimTempo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoFichaNavigation.CoSeqDimTipoFicha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoOrigemDadoTranspNavigation.CoSeqDimTpOrgmDadoTransp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimUnidadeSaude1Navigation.CoSeqDimUnidadeSaude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimUnidadeSaude2Navigation.CoSeqDimUnidadeSaude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoFatCidadaoPecNavigation.CoSeqFatCidadaoPec)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<br />
+
+<h3>tb_fat_atd_ind_encaminhamentos</h3>
+<div b-q26b4ng8qo="" class="container" style="overflow: auto;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    CoFatAtdInd
+                </th>
+                <th style=" min-width: 344px !important;">
+                    NuUuidFicha
+                </th>
+                <th>
+                    NuAtendimento
+                </th>
+                <th>
+                    NuCnsCidadao
+                </th>
+                <th>
+                    NuUuidDadoTransp
+                </th>
+                <th>
+                    NuCpfCidadao
+                </th>
+                <th>
+                    CoDimCid10
+                </th>
+                <th>
+                    CoDimCiap2
+                </th>
+                <th>
+                    CoDimCbo1
+                </th>
+                <th>
+                    CoDimCbo2
+                </th>
+                <th>
+                    CoDimCdsTipoOrigem
+                </th>
+                <th>
+                    CoDimClassificacaoRiscEnc
+                </th>
+                <th>
+                    CoDimEquipe1
+                </th>
+                <th>
+                    CoDimEquipe2
+                </th>
+                <th>
+                    CoDimEspecialidade
+                </th>
+                <th>
+                    CoDimMunicipio
+                </th>
+                <th>
+                    CoDimProfissional1
+                </th>
+                <th>
+                    CoDimProfissional2
+                </th>
+                <th>
+                    CoDimTempo
+                </th>
+                <th>
+                    CoDimTipoFicha
+                </th>
+                <th>
+                    CoDimTipoOrigemDadoTransp
+                </th>
+                <th>
+                    CoDimUnidadeSaude1
+                </th>
+                <th>
+                    CoDimUnidadeSaude2
+                </th>
+                <th>
+                    CoFatCidadaoPec
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in listaEncaminhamentos)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoFatAtdInd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuUuidFicha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuAtendimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuCnsCidadao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuUuidDadoTransp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuCpfCidadao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCid10)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCiap2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCbo1Navigation.CoSeqDimCbo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCbo2Navigation.CoSeqDimCbo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCdsTipoOrigemNavigation.CoSeqDimTipoOrigem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimClassificacaoRiscEncNavigation.CoSeqDimClassificRiscEnc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimEquipe1Navigation.CoSeqDimEquipe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimEquipe2Navigation.CoSeqDimEquipe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimEspecialidadeNavigation.CoSeqDimEspecialidade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimMunicipioNavigation.CoSeqDimMunicipio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProfissional1Navigation.CoSeqDimProfissional)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProfissional2Navigation.CoSeqDimProfissional)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTempoNavigation.CoSeqDimTempo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoFichaNavigation.CoSeqDimTipoFicha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoOrigemDadoTranspNavigation.CoSeqDimTpOrgmDadoTransp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimUnidadeSaude1Navigation.CoSeqDimUnidadeSaude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimUnidadeSaude2Navigation.CoSeqDimUnidadeSaude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoFatCidadaoPecNavigation.CoSeqFatCidadaoPec)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<br />
+
+
+<h3>tb_fat_fichas</h3>
+<div b-q26b4ng8qo="" class="container" style="overflow: auto;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th style=" min-width: 344px !important;">
+                    NuUuidFicha
+                </th>
+                <th style=" min-width: 344px !important;">
+                    NuUuidDadoTransp
+                </th>
+                <th>
+                    CoDimCdsTipoOrigem
+                </th>
+                <th>
+                    CoDimEquipe
+                </th>
+                <th>
+                    CoDimMunicipio
+                </th>
+                <th>
+                    CoDimTempo
+                </th>
+                <th>
+                    CoDimTipoFicha
+                </th>
+                <th>
+                    CoDimTipoOrigemDadoTransp
+                </th>
+                <th>
+                    CoDimUnidadeSaude
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in listaEFichas)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuUuidFicha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuUuidDadoTransp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCdsTipoOrigemNavigation.CoSeqDimTipoOrigem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimEquipeNavigation.CoSeqDimEquipe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimMunicipioNavigation.CoSeqDimMunicipio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTempoNavigation.CoSeqDimTempo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoFichaNavigation.CoSeqDimTipoFicha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoOrigemDadoTranspNavigation.CoSeqDimTpOrgmDadoTransp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimUnidadeSaudeNavigation.CoSeqDimUnidadeSaude)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<br />
+
+
+<h3>tb_fat_atd_ind_medicamentos</h3>
+<div b-q26b4ng8qo="" class="container" style="overflow: auto;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    CoFatAtdInd
+                </th>
+                <th>
+                    NuUuidFicha
+                </th>
+                <th>
+                    NuAtendimento
+                </th>
+                <th>
+                    NuCnsCidadao
+                </th>
+                <th>
+                    NuUuidDadoTransp
+                </th>
+                <th>
+                    NuCpfCidadao
+                </th>
+                <th>
+                    DsDose
+                </th>
+                <th>
+                    StDoseUnica
+                </th>
+                <th>
+                    StUsoContinuo
+                </th>
+                <th>
+                    DsDoseFrequencia
+                </th>
+                <th>
+                    QtDoseFrequencia
+                </th>
+                <th>
+                    QtDuracaoTratamento
+                </th>
+                <th>
+                    QtReceitada
+                </th>
+                <th>
+                    DtInicioTratamento
+                </th>
+                <th>
+                    CoDimCatmat
+                </th>
+                <th>
+                    CoDimCbo1
+                </th>
+                <th>
+                    CoDimCbo2
+                </th>
+                <th>
+                    CoDimCdsTipoOrigem
+                </th>
+                <th>
+                    CoDimDoseFrequenciaMedida
+                </th>
+                <th>
+                    CoDimDoseFrequencia
+                </th>
+                <th>
+                    CoDimDuracaoTratamentoMed
+                </th>
+                <th>
+                    CoDimEquipe1
+                </th>
+                <th>
+                    CoDimEquipe2
+                </th>
+                <th>
+                    CoDimMunicipio
+                </th>
+                <th>
+                    CoDimProfissional1
+                </th>
+                <th>
+                    CoDimProfissional2
+                </th>
+                <th>
+                    CoDimTempo
+                </th>
+                <th>
+                    CoDimTipoFicha
+                </th>
+                <th>
+                    CoDimTipoOrigemDadoTransp
+                </th>
+                <th>
+                    CoDimUnidadeSaude1
+                </th>
+                <th>
+                    CoDimUnidadeSaude2
+                </th>
+                <th>
+                    CoDimViaAdministracao
+                </th>
+                <th>
+                    CoFatCidadaoPec
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in listaMedicamentos)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoFatAtdInd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuUuidFicha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuAtendimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuCnsCidadao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuUuidDadoTransp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuCpfCidadao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DsDose)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StDoseUnica)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StUsoContinuo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DsDoseFrequencia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QtDoseFrequencia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QtDuracaoTratamento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QtReceitada)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DtInicioTratamento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCatmatNavigation.CoSeqDimCatmat)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCbo1Navigation.CoSeqDimCbo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCbo2Navigation.CoSeqDimCbo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCdsTipoOrigemNavigation.CoSeqDimTipoOrigem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimDoseFrequenciaMedidaNavigation.CoSeqDimDoseFrequenciaMed)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimDoseFrequenciaNavigation.CoSeqDimDoseFrequencia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimDuracaoTratamentoMedNavigation.CoSeqDimDuracaoTratMed)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimEquipe1Navigation.CoSeqDimEquipe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimEquipe2Navigation.CoSeqDimEquipe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimMunicipioNavigation.CoSeqDimMunicipio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProfissional1Navigation.CoSeqDimProfissional)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProfissional2Navigation.CoSeqDimProfissional)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTempoNavigation.CoSeqDimTempo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoFichaNavigation.CoSeqDimTipoFicha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoOrigemDadoTranspNavigation.CoSeqDimTpOrgmDadoTransp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimUnidadeSaude1Navigation.CoSeqDimUnidadeSaude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimUnidadeSaude2Navigation.CoSeqDimUnidadeSaude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimViaAdministracaoNavigation.CoSeqDimViaAdministracao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoFatCidadaoPecNavigation.CoSeqFatCidadaoPec)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<br />
+
+<h3>tb_fat_atd_ind_exames</h3>
+<div b-q26b4ng8qo="" class="container" style="overflow: auto;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    CoFatAtdInd
+                </th>
+                <th>
+                    NuUuidFicha
+                </th>
+                <th>
+                    NuAtendimento
+                </th>
+                <th>
+                    NuCnsCidadao
+                </th>
+                <th>
+                    NuUuidDadoTransp
+                </th>
+                <th>
+                    NuCpfCidadao
+                </th>
+                <th>
+                    DtSolicitacao
+                </th>
+                <th>
+                    DtRealizacao
+                </th>
+                <th>
+                    DtResultado
+                </th>
+                <th>
+                    NuResultadoValor
+                </th>
+                <th>
+                    NuResultadoDia
+                </th>
+                <th>
+                    NuResultadoSemana
+                </th>
+                <th>
+                    DtResultadoData
+                </th>
+                <th>
+                    CoDimCbo1
+                </th>
+                <th>
+                    CoDimCbo2
+                </th>
+                <th>
+                    CoDimCdsTipoOrigem
+                </th>
+                <th>
+                    CoDimEquipe1
+                </th>
+                <th>
+                    CoDimEquipe2
+                </th>
+                <th>
+                    CoDimMunicipio
+                </th>
+                <th>
+                    CoDimProcedimento
+                </th>
+                <th>
+                    CoDimProfissional1
+                </th>
+                <th>
+                    CoDimProfissional2
+                </th>
+                <th>
+                    CoDimTempo
+                </th>
+                <th>
+                    CoDimTipoFicha
+                </th>
+                <th>
+                    CoDimTipoOrigemDadoTransp
+                </th>
+                <th>
+                    CoDimUnidadeSaude1
+                </th>
+                <th>
+                    CoDimUnidadeSaude2
+                </th>
+                <th>
+                    CoFatCidadaoPec
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in listaExames)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoFatAtdInd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuUuidFicha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuAtendimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuCnsCidadao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuUuidDadoTransp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuCpfCidadao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DtSolicitacao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DtRealizacao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DtResultado)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuResultadoValor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuResultadoDia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NuResultadoSemana)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DtResultadoData)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCbo1Navigation.CoSeqDimCbo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCbo2Navigation.CoSeqDimCbo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimCdsTipoOrigemNavigation.CoSeqDimTipoOrigem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimEquipe1Navigation.CoSeqDimEquipe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimEquipe2Navigation.CoSeqDimEquipe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimMunicipioNavigation.CoSeqDimMunicipio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProcedimentoNavigation.CoSeqDimProcedimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProfissional1Navigation.CoSeqDimProfissional)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimProfissional2Navigation.CoSeqDimProfissional)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTempoNavigation.CoSeqDimTempo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoFichaNavigation.CoSeqDimTipoFicha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimTipoOrigemDadoTranspNavigation.CoSeqDimTpOrgmDadoTransp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimUnidadeSaude1Navigation.CoSeqDimUnidadeSaude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoDimUnidadeSaude2Navigation.CoSeqDimUnidadeSaude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoFatCidadaoPecNavigation.CoSeqFatCidadaoPec)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

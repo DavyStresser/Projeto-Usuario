@@ -1,0 +1,819 @@
+﻿@model GISA.Model.TbFatCadIndividual
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TbFatCadIndividual</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NuUuidFicha)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NuUuidFicha)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NuUuidFichaOrigem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NuUuidFichaOrigem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StRecusaCadastro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StRecusaCadastro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NuCns)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NuCns)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DtNascimento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DtNascimento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDesconheceMae)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDesconheceMae)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NuCnsResponsavel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NuCnsResponsavel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StResponsavelFamiliar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StResponsavelFamiliar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StFrequentaCreche)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StFrequentaCreche)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StFrequentaCuidador)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StFrequentaCuidador)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StParticipaGrupoComunitario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StParticipaGrupoComunitario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StPlanoSaudePrivado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StPlanoSaudePrivado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StComunidadeTradicional)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StComunidadeTradicional)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDeficiencia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDeficiencia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDefiAuditiva)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDefiAuditiva)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDefiIntelectualCognitiva)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDefiIntelectualCognitiva)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDefiOutra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDefiOutra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDefiVisual)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDefiVisual)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDefiFisica)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDefiFisica)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StGestante)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StGestante)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDoencaRespiratoria)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDoencaRespiratoria)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDoencaRespiraAsma)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDoencaRespiraAsma)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDoencaRespiraDpocEnfisem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDoencaRespiraDpocEnfisem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDoencaRespiraOutra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDoencaRespiraOutra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDoencaRespiraNSabe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDoencaRespiraNSabe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StFumante)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StFumante)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StAlcool)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StAlcool)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StOutraDroga)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StOutraDroga)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StHipertensaoArterial)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StHipertensaoArterial)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDiabete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDiabete)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StAvc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StAvc)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StInfarto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StInfarto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StHanseniase)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StHanseniase)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StTuberculose)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StTuberculose)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StCancer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StCancer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StInternacao12)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StInternacao12)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StTratamentoPsiquiatra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StTratamentoPsiquiatra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StAcamado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StAcamado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDomiciliado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDomiciliado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StUsaPlantaMedicinal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StUsaPlantaMedicinal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDoencaCardiaca)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDoencaCardiaca)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDoencaCardInsuficiencia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDoencaCardInsuficiencia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDoencaCardOutro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDoencaCardOutro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDoencaCardNSabe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDoencaCardNSabe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StProblemaRins)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StProblemaRins)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StProblemaRinsInsuficiencia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StProblemaRinsInsuficiencia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StProblemaRinsOutro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StProblemaRinsOutro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StProblemaRinsNaoSabe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StProblemaRinsNaoSabe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StPic)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StPic)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StMoradorRua)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StMoradorRua)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StRecebeBeneficio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StRecebeBeneficio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StReferenciaFamiliar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StReferenciaFamiliar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StOrigAlimenRestaurantePop)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StOrigAlimenRestaurantePop)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StOrigAlimenDoacaoReli)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StOrigAlimenDoacaoReli)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StOrigAlimenDoacaoRest)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StOrigAlimenDoacaoRest)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StOrigAlimenDoacaoPopular)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StOrigAlimenDoacaoPopular)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StOrigAlimenOutros)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StOrigAlimenOutros)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StAcompanhadoInstituicao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StAcompanhadoInstituicao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StVisitaFamiliarFrequente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StVisitaFamiliarFrequente)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StHigienePessoalAcesso)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StHigienePessoalAcesso)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StHigPessBanho)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StHigPessBanho)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StHigPessSanitario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StHigPessSanitario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StHigPessHigieneBucal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StHigPessHigieneBucal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StHigPessOutros)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StHigPessOutros)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StDesconhecePai)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StDesconhecePai)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StInformarOrientacaoSexual)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StInformarOrientacaoSexual)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StInformarIdentidadeGenero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StInformarIdentidadeGenero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DtNaturalizacao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DtNaturalizacao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DtEntradaBrasil)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DtEntradaBrasil)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DtObito)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DtObito)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StResponsCriancaAdultoResp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StResponsCriancaAdultoResp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StResponsCriancaOutraCrian)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StResponsCriancaOutraCrian)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StResponsCriancaAdolescente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StResponsCriancaAdolescente)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StResponsCriancaSozinha)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StResponsCriancaSozinha)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StResponsCriancaCreche)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StResponsCriancaCreche)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StResponsCriancaOutro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StResponsCriancaOutro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NuMicroArea)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NuMicroArea)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StProcessoLinhaTempo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StProcessoLinhaTempo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StProcessoCidadao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StProcessoCidadao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoNome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoNome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoNomeSocial)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoNomeSocial)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoNomeMae)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoNomeMae)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoNomePai)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoNomePai)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NuNis)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NuNis)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NuPortariaNaturalizacao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NuPortariaNaturalizacao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NuCelular)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NuCelular)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NuObitoDo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NuObitoDo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoMaternidadeReferencia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoMaternidadeReferencia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoCausaInternacao12)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoCausaInternacao12)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoPlantasMedicinais)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoPlantasMedicinais)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoOutraCondicao1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoOutraCondicao1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoOutraCondicao2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoOutraCondicao2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoOutraCondicao3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoOutraCondicao3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoAcompanhadoInstituicao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoAcompanhadoInstituicao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoVisitaFamiliarParentesco)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoVisitaFamiliarParentesco)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NuUuidDadoTransp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NuUuidDadoTransp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StGeradoAutomaticamente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StGeradoAutomaticamente)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StFichaInativa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StFichaInativa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StProcOperacionais)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StProcOperacionais)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NuCpfCidadao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NuCpfCidadao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NuCpfResponsavel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NuCpfResponsavel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimCboCidadaoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimCboCidadaoNavigation.CoSeqDimCbo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimCboNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimCboNavigation.CoSeqDimCbo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimCdsTipoOrigemNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimCdsTipoOrigemNavigation.CoSeqDimTipoOrigem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimEquipeNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimEquipeNavigation.CoSeqDimEquipe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimEtniaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimEtniaNavigation.CoSeqDimEtnia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimFaixaEtariaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimFaixaEtariaNavigation.CoSeqDimFaixaEtaria)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimFrequenciaAlimentacaoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimFrequenciaAlimentacaoNavigation.CoSeqDimFrequenciaAliment)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimIdentidadeGeneroNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimIdentidadeGeneroNavigation.CoSeqDimIdentidadeGenero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimMunicipioCidadaoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimMunicipioCidadaoNavigation.CoSeqDimMunicipio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimMunicipioNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimMunicipioNavigation.CoSeqDimMunicipio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimNacionalidadeNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimNacionalidadeNavigation.CoSeqDimNacionalidade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimPaisNascimentoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimPaisNascimentoNavigation.CoSeqDimPais)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimPovoComunidadTradNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimPovoComunidadTradNavigation.CoSeqDimPovoComunidadTrad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimProfissionalNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimProfissionalNavigation.CoSeqDimProfissional)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimRacaCorNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimRacaCorNavigation.CoSeqDimRacaCor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimSexoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimSexoNavigation.CoSeqDimSexo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimSituacaoTrabalhoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimSituacaoTrabalhoNavigation.CoSeqDimSituacaoTrabalho)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimTempoMoradorRuaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimTempoMoradorRuaNavigation.CoSeqDimTempoMoradorRua)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimTempoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimTempoNavigation.CoSeqDimTempo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimTempoValidadeNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimTempoValidadeNavigation.CoSeqDimTempo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimTempoValidadeRecusaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimTempoValidadeRecusaNavigation.CoSeqDimTempo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimTipoCondicaoPesoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimTipoCondicaoPesoNavigation.CoSeqDimTipoCondicaoPeso)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimTipoEscolaridadeNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimTipoEscolaridadeNavigation.CoSeqDimTipoEscolaridade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimTipoFichaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimTipoFichaNavigation.CoSeqDimTipoFicha)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimTipoOrientacaoSexualNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimTipoOrientacaoSexualNavigation.CoSeqDimTipoOrientacaoSxl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimTipoOrigemDadoTranspNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimTipoOrigemDadoTranspNavigation.CoSeqDimTpOrgmDadoTransp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimTipoParentescoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimTipoParentescoNavigation.CoSeqDimTipoParentesco)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimTipoSaidaCadastroNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimTipoSaidaCadastroNavigation.CoSeqDimTipoSaidaCadastro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoDimUnidadeSaudeNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoDimUnidadeSaudeNavigation.CoSeqDimUnidadeSaude)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoFatCidadaoPecNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoFatCidadaoPecNavigation.CoSeqFatCidadaoPec)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoFatCidadaoPecResponsvlNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoFatCidadaoPecResponsvlNavigation.CoSeqFatCidadaoPec)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CoSeqFatCadIndividual" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
