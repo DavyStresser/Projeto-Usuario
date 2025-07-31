@@ -1,0 +1,43 @@
+<div class="container">
+  <h2>{{ editando ? 'Editar' : 'Cadastrar' }} Usuário WhatsApp</h2>
+
+  <form (ngSubmit)="salvarUsuario()" #form="ngForm">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input id="nome" [(ngModel)]="usuario.nome" name="nome" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="celular">Celular:</label>
+      <input id="celular" [(ngModel)]="usuario.celular" name="celular" class="form-control" required>
+    </div>
+
+    <button class="btn btn-success" type="submit" [disabled]="!form.valid">
+      {{ editando ? 'Atualizar' : 'Salvar' }}
+    </button>
+    <button class="btn btn-secondary ml-2" type="button" (click)="resetarFormulario()">Cancelar</button>
+  </form>
+
+  <hr>
+
+  <h3>Usuários Cadastrados</h3>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Celular</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of usuarios">
+        <td>{{ u.nome }}</td>
+        <td>{{ u.celular }}</td>
+        <td>
+          <button class="btn btn-sm btn-warning" (click)="editarUsuario(u)">Editar</button>
+          <button class="btn btn-sm btn-danger ml-2" (click)="excluirUsuario(u.id_whatsapp)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
