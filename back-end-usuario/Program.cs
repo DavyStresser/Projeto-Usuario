@@ -1,7 +1,6 @@
 using GISA.Model;
 using GISA.Repository;
 using GISA.Repository.Interfaces;
-using GISA.Worker;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
@@ -51,11 +50,6 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 });
 
 builder.Services.AddScoped<IWhatsappRepository, WhatsappRepository>();
-
-
-//WORKES
-builder.Services.AddHostedService<TarefaWorker>();
-builder.Services.AddHostedService<SqlWorker>();
 
 builder.Services.AddDbContext<EsusContext>(options =>
    options.LogTo(message => Debug.WriteLine(message)).

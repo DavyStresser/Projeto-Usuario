@@ -57,7 +57,6 @@ namespace GISA.Controllers
 
                 var claims = new List<Claim>();
                 claims.Add(new Claim("UsuarioId", Convert.ToString(usuarioViewModel.UsuarioId)));
-                claims.Add(new Claim("UsuarioNome", usuarioViewModel.Nome));
                 claims.Add(new Claim("UsuarioPerfilId", Convert.ToString(usuarioViewModel.PerfilId)));
 
                 var tokeOptions = new JwtSecurityToken(

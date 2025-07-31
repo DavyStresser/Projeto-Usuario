@@ -14,19 +14,25 @@
     <Compile Remove="ModelMySql\**" />
     <Compile Remove="Thrift\dadotransp\**" />
     <Compile Remove="Thrift\Models\**" />
+    <Compile Remove="Views\Home\**" />
     <Content Remove="ModelMySql\**" />
     <Content Remove="Thrift\dadotransp\**" />
     <Content Remove="Thrift\Models\**" />
+    <Content Remove="Views\Home\**" />
     <EmbeddedResource Remove="ModelMySql\**" />
     <EmbeddedResource Remove="Thrift\dadotransp\**" />
     <EmbeddedResource Remove="Thrift\Models\**" />
+    <EmbeddedResource Remove="Views\Home\**" />
     <None Remove="ModelMySql\**" />
     <None Remove="Thrift\dadotransp\**" />
     <None Remove="Thrift\Models\**" />
+    <None Remove="Views\Home\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Repository\OdontoRepository.cs" />
+    <Compile Remove="Worker\SqlWorker.cs" />
+    <Compile Remove="Worker\TarefaWorker.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -58,6 +64,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Worker\" />
     <Folder Include="wwwroot\Arquivos\" />
   </ItemGroup>
 
